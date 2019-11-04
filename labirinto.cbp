@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arquivo.h" />
+		<Unit filename="fila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fila.h" />
 		<Unit filename="labirinnto.h" />
 		<Unit filename="labirinto.c">
 			<Option compilerVar="CC" />
