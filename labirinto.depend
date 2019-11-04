@@ -19,17 +19,18 @@
 	<stdlib.h>
 	"arquivo.h"
 
-1572728841 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.c
+1572874851 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arquivo.h"
 
-1572719748 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.h
+1572875165 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.h
 
-1572812765 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/main.c
+1572874857 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/main.c
 	<stdio.h>
 	<stdlib.h>
+	"labirinnto.h"
 	"arquivo.h"
 
 1572815860 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.c
@@ -37,16 +38,27 @@
 	<stdlib.h>
 	"pilha.h"
 
-1572827591 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.h
+1572879501 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.h
 
-1572830231 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinto.c
+1572882977 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arquivo.h"
 	"labirinnto.h"
 	"pilha.h"
+	"fila.h"
 
-1572826014 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinnto.h
+1572880576 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinnto.h
+	"pilha.h"
+	"fila.h"
+	"arquivo.h"
+
+1572879545 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
+1572879578 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/fila.h
 	"pilha.h"
 

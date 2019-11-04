@@ -11,6 +11,7 @@ FILE* abrirArquivo(char *arqEntrada)
     return arq;
 }
 
+
 int verificacaExtensao(char ** comando,char *entrada)
 {
     if(strstr(comando[1],".txt")!=NULL)
@@ -22,7 +23,8 @@ int verificacaExtensao(char ** comando,char *entrada)
         return 0;
 }
 
-void leLabirintoNoArq(FILE *arq,char **m,dados d)
+
+void passaLabirintoParaMatriz(FILE *arq,char **m,dados d)
 {
     char elementoDoLabirinto;
     int l=0,c=0;
@@ -43,6 +45,7 @@ void leLabirintoNoArq(FILE *arq,char **m,dados d)
     }while(elementoDoLabirinto!=EOF);
 }
 
+
 char **alocaMemoriaDaMatriz(dados d)
 {
     char **m;
@@ -53,6 +56,7 @@ char **alocaMemoriaDaMatriz(dados d)
         m[i]=(char*)malloc(sizeof(char)*d->linha);
     return m;
 }
+
 
 char** coletaDadosDoArquivo(char*entrada,dados *d)
 {
@@ -72,14 +76,14 @@ char** coletaDadosDoArquivo(char*entrada,dados *d)
         (*d)->linha=l;
         (*d)->coluna=c;
 
-        fscanf(arqEntrada,"%d%d%d%d",&cE,&lE,&cS,&lS);
+        fscanf(arqEntrada,"%d%d%d%d",&lE,&cE,&lS,&cS);
         (*d)->lEntrada=lE;
         (*d)->cEntrada=cE;
         (*d)->lSaida=lS;
         (*d)->cSaida=cS;
 
         matriz=alocaMemoriaDaMatriz(*d);
-        leLabirintoNoArq(arqEntrada,matriz,*d);
+        passaLabirintoParaMatriz(arqEntrada,matriz,*d);
 
     }
     return matriz;

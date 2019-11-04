@@ -3,19 +3,22 @@
 
 typedef int TChave;
 
-typedef struct{
+typedef struct
+{
     int peek;
     int peekNaoPode;
     int linha;
     int coluna;
 }TElemento;
 
-typedef struct nodo {
+typedef struct nodo
+{
     TElemento info;
     struct nodo *prox;
 }TNodo;
 
-typedef struct {
+typedef struct
+{
     TNodo *topo;
     int tamanho;
 }TPilha;
