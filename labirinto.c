@@ -14,7 +14,7 @@ void passaCamiinhoParaFila(pilha p,fila f)
 
     p2=criaPilha();
 
-    if(p->tamanho>f->tamanho || f->tamanho==0)
+    if(p->tamanho<f->tamanho || f->tamanho==0)
     {
         while(f->inicio!=NULL)
         {
