@@ -5,6 +5,7 @@ typedef int TChave;
 
 typedef struct{
     int peek;
+    int peekNaoPode;
     int linha;
     int coluna;
 }TElemento;

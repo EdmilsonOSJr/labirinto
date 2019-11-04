@@ -24,7 +24,6 @@ int push(pilha p,TElemento e)
 
     if(n==NULL)
         return 0;
-
     n->info=e;
     n->prox=p->topo;
     p->topo=n;

@@ -15,16 +15,9 @@ int iniciar(int nomes,char**arquivo)
     else
     {
        matriz=coletaDadosDoArquivo(entrada,&d);
-    }
-    for(i=0;i<d->linha;i++){
-        for(j=0;j<d->coluna;j++)
-            printf("%c",matriz[i][j]);
-        printf("\n");
+       robo(matriz,d);
     }
 
-
-    printf("\nSaida: %c\n",matriz[d->lSaida][d->cSaida]);
-    printf("\nEntrada: %c\n",matriz[d->lEntrada][d->cEntrada]);
     return 0;
 }
 
