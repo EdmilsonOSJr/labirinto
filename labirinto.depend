@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1572728685 source:/home/edmilson/Documentos/labirinto/arquivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arquivo.h"
+
+1572719748 /home/edmilson/Documentos/labirinto/arquivo.h
+
+1572699445 source:/home/edmilson/Documentos/labirinto/pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1572699435 /home/edmilson/Documentos/labirinto/pilha.h
+
+1572728823 source:/home/edmilson/Documentos/labirinto/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arquivo.h"
+
+1572728841 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arquivo.h"
+
+1572719748 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.h
+
+1572812765 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arquivo.h"
+
+1572815860 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1572827591 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.h
+
+1572830231 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arquivo.h"
+	"labirinnto.h"
+	"pilha.h"
+
+1572826014 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinnto.h
+	"pilha.h"
+
