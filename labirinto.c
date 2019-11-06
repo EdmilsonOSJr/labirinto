@@ -35,6 +35,7 @@ void passaCamiinhoParaFila(pilha p,fila f)
             enfilera(f,e);
         }
     }
+    terminaPilha(p2);
 
 }
 
@@ -301,4 +302,6 @@ void andar(char** matriz,dados d)
     printaMelhorCaminho(d,f,matriz);
 
     printf("\nFIM\n");
+    terminaPilha(p);
+    terminaFila(f);
 }
