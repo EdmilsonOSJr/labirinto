@@ -245,7 +245,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
             break;
 
         }
-    }while((p->topo->info.peek)<5);
+    }while((p->topo->info.peek)<5 && p->tamanho>f->tamanho);
 
     pop(p,&e);
     voltaOCaminhoAoNormal(matriz,e);
