@@ -12,24 +12,10 @@
 			<Cursor1 position="495" topLine="4" />
 		</Cursor>
 	</File>
-	<File name="pilha.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="labirinto.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="290" topLine="0" />
+			<Cursor1 position="303" topLine="93" />
 		</Cursor>
-	</File>
-	<File name="fila.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="92" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="392" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="6" />
-			<Collapse line="24" />
-		</Folding>
 	</File>
 	<File name="arquivo.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -39,35 +25,32 @@
 			<Collapse line="4" />
 		</Folding>
 	</File>
-	<File name="labirinto.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="303" topLine="6" />
-		</Cursor>
-		<Folding>
-			<Collapse line="40" />
-			<Collapse line="53" />
-			<Collapse line="64" />
-			<Collapse line="146" />
-			<Collapse line="152" />
-			<Collapse line="170" />
-			<Collapse line="283" />
-		</Folding>
-	</File>
-	<File name="arquivo.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="189" topLine="0" />
+			<Cursor1 position="392" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="6" />
-			<Collapse line="15" />
-			<Collapse line="27" />
-			<Collapse line="49" />
-			<Collapse line="61" />
 		</Folding>
+	</File>
+	<File name="fila.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="92" topLine="7" />
+		</Cursor>
 	</File>
 	<File name="labirinnto.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2029" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="arquivo.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="990" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="pilha.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="290" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

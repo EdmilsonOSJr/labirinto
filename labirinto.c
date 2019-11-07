@@ -35,6 +35,7 @@ void passaCamiinhoParaFila(pilha p,fila f)
             enfilera(f,e);
         }
     }
+    terminaPilha(p2);
 
 }
 
@@ -173,78 +174,91 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
 
     do
     {
-        switch(p->topo->info.peek)
+        if(p->tamanho<f->tamanho || f->tamanho==0)
         {
-            case 1:
 
-                if(verificaSeAchouFinal(d,p,matriz,f)==0)
-                {
-                    if(verificaRetornoInvalido(p)==0)
+
+            switch(p->topo->info.peek)
+            {
+                case 1:
+
+                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
                     {
-                        if(matriz[p->topo->info.linha][(p->topo->info.coluna)+1]=='0')
+                        if(verificaRetornoInvalido(p)==0)
                         {
-                            percorreMatriz(p,d,matriz);
+                            if(matriz[p->topo->info.linha][(p->topo->info.coluna)+1]=='0')
+                            {
+                                percorreMatriz(p,d,matriz);
+                            }
+                            else
+                                (p->topo->info.peek)=p->topo->info.peek+1;
                         }
-                        else
-                            (p->topo->info.peek)=p->topo->info.peek+1;
                     }
-                }
 
-            break;
+                break;
 
-            case 2:
+                case 2:
 
-                if(verificaSeAchouFinal(d,p,matriz,f)==0)
-                {
-                    if(verificaRetornoInvalido(p)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
                     {
-                        if(matriz[(p->topo->info.linha)+1][p->topo->info.coluna]=='0')
+                        if(verificaRetornoInvalido(p)==0)
                         {
-                            percorreMatriz(p,d,matriz);
+                            if(matriz[(p->topo->info.linha)+1][p->topo->info.coluna]=='0')
+                            {
+                                percorreMatriz(p,d,matriz);
+                            }
+                             else
+                                (p->topo->info.peek)=p->topo->info.peek+1;
                         }
-                         else
-                            (p->topo->info.peek)=p->topo->info.peek+1;
                     }
-                }
 
-            break;
+                break;
 
-            case 3:
+                case 3:
 
-                if(verificaSeAchouFinal(d,p,matriz,f)==0)
-                {
-                    if(verificaRetornoInvalido(p)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
                     {
-                        if(matriz[p->topo->info.linha][(p->topo->info.coluna)-1]=='0')
+                        if(verificaRetornoInvalido(p)==0)
                         {
-                            percorreMatriz(p,d,matriz);
+                            if(matriz[p->topo->info.linha][(p->topo->info.coluna)-1]=='0')
+                            {
+                                percorreMatriz(p,d,matriz);
+                            }
+                             else
+                                (p->topo->info.peek)=p->topo->info.peek+1;
                         }
-                         else
-                            (p->topo->info.peek)=p->topo->info.peek+1;
                     }
-                }
 
-            break;
+                break;
 
-            case 4:
+                case 4:
 
-                if(verificaSeAchouFinal(d,p,matriz,f)==0)
-                {
-                    if(verificaRetornoInvalido(p)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
                     {
-                        if(matriz[(p->topo->info.linha)-1][p->topo->info.coluna]=='0')
+                        if(verificaRetornoInvalido(p)==0)
                         {
-                            percorreMatriz(p,d,matriz);
+                            if(matriz[(p->topo->info.linha)-1][p->topo->info.coluna]=='0')
+                            {
+                                percorreMatriz(p,d,matriz);
+                            }
+                             else
+                                (p->topo->info.peek)=p->topo->info.peek+1;
                         }
-                         else
-                            (p->topo->info.peek)=p->topo->info.peek+1;
                     }
-                }
 
-            break;
+                break;
 
+            }
         }
-    }while((p->topo->info.peek)<5);
+        else
+        {
+            pop(p,&e);
+            voltaOCaminhoAoNormal(matriz,e);
+
+            printf("\nMAIOR QUE F\n");
+            andaMatriz(d,matriz);
+        }
+    }while((p->topo->info.peek)<5 );
 
     pop(p,&e);
     voltaOCaminhoAoNormal(matriz,e);
@@ -301,4 +315,6 @@ void andar(char** matriz,dados d)
     printaMelhorCaminho(d,f,matriz);
 
     printf("\nFIM\n");
+    terminaPilha(p);
+    terminaFila(f);
 }
