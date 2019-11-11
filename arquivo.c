@@ -65,9 +65,11 @@ char** coletaDadosDoArquivo(char*entrada,dados *d)
     int l,c,lE,cE,lS,cS;
 
     arqEntrada=abrirArquivo(entrada);
-
     if(arqEntrada==NULL)
+    {
         printf("\nArquivo não encontrado!!!");
+        matriz=NULL;
+    }
     else
     {
         *d=(dados)malloc(sizeof(TDados));
@@ -84,7 +86,7 @@ char** coletaDadosDoArquivo(char*entrada,dados *d)
 
         matriz=alocaMemoriaDaMatriz(*d);
         passaLabirintoParaMatriz(arqEntrada,matriz,*d);
-
+        fclose(arqEntrada);
     }
     return matriz;
 }

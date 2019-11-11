@@ -288,6 +288,7 @@ void passaMelhorCaminhoParaArqDeSaida(dados d,lista l,char**matriz)
             fprintf(saida,"%c",matriz[i][j]);
         fprintf(saida,"\n");
      }
+     fclose(saida);
 
 }
 
