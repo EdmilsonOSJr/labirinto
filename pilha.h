@@ -3,6 +3,9 @@
 
 typedef int TChave;
 
+/*Essa estrutura guarda um peek que seria qual caminho o nodo atual quer percorrer, onde 1=direita, 2=baixo, 3=esquerda e 4=cima.
+Ela também guarda a linha e coluna atuais. E a variável peekNaoPode guarda qual é a movimentação que resultaria num retorno
+para posição que acabou de ser visitada*/
 typedef struct
 {
     int peek;

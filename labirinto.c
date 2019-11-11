@@ -39,18 +39,6 @@ void passaCamiinhoParaLista(pilha p,lista l)
 
 }
 
-void andaMatriz(dados d,char** matriz){
-    int i,j;
-
-    for(i=0;i<d->linha;i++){
-        for(j=0;j<d->coluna;j++)
-            printf("%c",matriz[i][j]);
-        printf("\n");
-    }
-    printf("\n");
-}
-
-
 void percorreMatriz(pilha p,dados d,char** matriz)
 {
     TElemento e;
@@ -58,7 +46,6 @@ void percorreMatriz(pilha p,dados d,char** matriz)
     proximaPosicao(&e,p,d);
     push(p,e);
     demarcaCaminho(matriz,e);
-    andaMatriz(d,matriz);
 }
 
 
@@ -71,7 +58,6 @@ int verificaSeAchouFinal(dados d,pilha p,char**matriz,lista l)
         passaCamiinhoParaLista(p,l);
         pop(p,&e);
         voltaOCaminhoAoNormal(matriz,e);
-        printf("\nAchou\n");
 
         return 1;
     }
@@ -254,17 +240,11 @@ void caminhoPossivel(pilha p,char**matriz,dados d,lista l)
         {
             pop(p,&e);
             voltaOCaminhoAoNormal(matriz,e);
-
-            printf("\nMAIOR QUE F\n");
-            andaMatriz(d,matriz);
         }
     }while((p->topo->info.peek)<5 );
 
     pop(p,&e);
     voltaOCaminhoAoNormal(matriz,e);
-
-    printf("\nsem saida\n");
-    andaMatriz(d,matriz);
 }
 
 void passaMelhorCaminhoParaArqDeSaida(dados d,lista l,char**matriz)
@@ -309,7 +289,6 @@ void passaMelhorCaminhoParaArqDeSaida(dados d,lista l,char**matriz)
         fprintf(saida,"\n");
      }
 
-    andaMatriz(d,matriz);
 }
 
 
@@ -333,7 +312,7 @@ void andar(char** matriz,dados d)
 
     passaMelhorCaminhoParaArqDeSaida(d,l,matriz);
 
-    printf("\nFIM\n");
+    printf("\nFinalizado com sucesso\n");
     terminaPilha(p);
     termina_lista(l);
 }
