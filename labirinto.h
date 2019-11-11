@@ -10,7 +10,7 @@ da pilha for igual a essa primeira posição de entrada*/
 void andar(char**,dados);
 
 
-/*Como a saída do labirinto sempre proporciona apenas um caminho pra movimentação essa função cuida de descobrir qual seria esse para assim
+/*Como a saída do labirinto sempre proporciona apenas um caminho para movimentação essa função cuida de descobrir qual seria esse para assim
 evitar testes desnecessários*/
 int verificaDirecaoDeSaida(dados);
 
@@ -54,6 +54,12 @@ int verificaSeAchouFinal(dados,pilha,char**,lista);
 caso n tenha mais saídas e assim seja necessário usar o pop na pilha*/
 int verificaRetornoInvalido(pilha p);
 
+
+/*Aqui o caminho que chegou no final é escrito na lista. Isso ocorre em dois casos se o tamanho da lista é 0 ou se o tamanho da
+pilha for menor que o da fila atual*/
 void passaCamiinhoParaLista(pilha,lista);
+
+/*Passa O menor caminho para o arquio de saida junto de uma representação do labirinto com o menir caminho marcado com '1'*/
+void passaMelhorCaminhoParaArqDeSaida(dados,lista,char**);
 
 #endif // LABIRINTO_H_INCLUDED

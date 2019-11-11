@@ -267,7 +267,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,lista l)
     andaMatriz(d,matriz);
 }
 
-void printaMelhorCaminho(dados d,lista l,char**matriz)
+void passaMelhorCaminhoParaArqDeSaida(dados d,lista l,char**matriz)
 {
     FILE *saida;
     TNodoLista *n;
@@ -331,7 +331,7 @@ void andar(char** matriz,dados d)
 
     }while(d->lEntrada!=p->topo->info.linha || d->cEntrada!=p->topo->info.coluna);
 
-    printaMelhorCaminho(d,l,matriz);
+    passaMelhorCaminhoParaArqDeSaida(d,l,matriz);
 
     printf("\nFIM\n");
     terminaPilha(p);
