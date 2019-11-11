@@ -6,7 +6,7 @@
 #include "pilha.h"
 #include "lista.h"
 
-void passaCamiinhoParaFila(pilha p,lista l)
+void passaCamiinhoParaLista(pilha p,lista l)
 {
     pilha p2;
     TElemento e;
@@ -68,7 +68,7 @@ int verificaSeAchouFinal(dados d,pilha p,char**matriz,lista l)
 
     if(d->lSaida==p->topo->info.linha && d->cSaida==p->topo->info.coluna)
     {
-        passaCamiinhoParaFila(p,l);
+        passaCamiinhoParaLista(p,l);
         pop(p,&e);
         voltaOCaminhoAoNormal(matriz,e);
         printf("\nAchou\n");
@@ -269,7 +269,31 @@ void caminhoPossivel(pilha p,char**matriz,dados d,lista l)
 
 void printaMelhorCaminho(dados d,lista l,char**matriz)
 {
-   TNodoLista *n;
+    FILE *saida;
+    TNodoLista *n;
+    char titulo[100];
+    int i,j;
+
+
+    saida=fopen("saida.txt","w+");
+
+    strcpy(titulo,"===================MENOR CAMINHO===================\n");
+    fprintf(saida,"%s\n",titulo);
+
+    n=l->first;
+    while(n!=NULL)
+    {
+        if(n==l->last)
+        {
+            fprintf(saida,"Matriz [%d][%d]\n\n",n->info.linha,n->info.coluna);
+            n=n->next;
+        }
+        else
+        {
+            fprintf(saida,"Matriz [%d][%d]\n",n->info.linha,n->info.coluna);
+            n=n->next;
+        }
+    }
 
     n=l->first;
     while(n!=NULL)
@@ -278,17 +302,12 @@ void printaMelhorCaminho(dados d,lista l,char**matriz)
         n=n->next;
     }
 
-    printf("\n===================MENOR CAMINHO===================\n");
-    printf("\n");
-
-    n=l->first;
-    while(n!=NULL)
+    for(i=0;i<d->linha;i++)
     {
-        printf(" Matriz[%d][%d] ",n->info.linha,n->info.coluna);
-        n=n->next;
-    }
-    printf("\n");
-    printf("\n");
+        for(j=0;j<d->coluna;j++)
+            fprintf(saida,"%c",matriz[i][j]);
+        fprintf(saida,"\n");
+     }
 
     andaMatriz(d,matriz);
 }

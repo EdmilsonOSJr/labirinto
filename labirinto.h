@@ -54,5 +54,6 @@ int verificaSeAchouFinal(dados,pilha,char**,lista);
 caso n tenha mais saídas e assim seja necessário usar o pop na pilha*/
 int verificaRetornoInvalido(pilha p);
 
+void passaCamiinhoParaLista(pilha,lista);
 
 #endif // LABIRINTO_H_INCLUDED
