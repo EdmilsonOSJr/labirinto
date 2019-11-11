@@ -62,4 +62,7 @@ void passaCamiinhoParaLista(pilha,lista);
 /*Passa O menor caminho para o arquio de saida junto de uma representação do labirinto com o menir caminho marcado com '1'*/
 void passaMelhorCaminhoParaArqDeSaida(dados,lista,char**);
 
+/*Libera a memória alocada para a matriz*/
+char **terminaMatriz(int,int,char **);
+
 #endif // LABIRINTO_H_INCLUDED
