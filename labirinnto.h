@@ -2,7 +2,7 @@
 #define LABIRINNTO__H_INCLUDED
 
 #include "pilha.h"
-#include "fila.h"
+#include "lista.h"
 #include "arquivo.h"
 
 /*Nessa função é colocada a primeira posição na pilha e depois é iniciado um  loop que apenas será quebrado caso a posição atual
@@ -23,7 +23,7 @@ void demarcaCaminho(char**,TElemento);
 
 /*Verifica se o caminho correspondente a variável peek é válido. Caso seja anda por ele marcando a matriz com 'v' e inserindo o
 elemento na pilha*/
-void caminhoPossivel(pilha,char**,dados,fila);
+void caminhoPossivel(pilha,char**,dados,lista);
 
 
 /*Recebe a pilha, dados do labirinto e uma variável TElemento como referencia. A partir da variável peek presente no topo da pilha
@@ -47,7 +47,7 @@ void percorreMatriz(pilha,dados,char**);
 
 /*Verifica se a posição atual corresponde a saída. Em caso verdadeiro é realizado pop na pilha e a posição que foi retirada é
 marcada na matriz com '0' ao invés do 'v'*/
-int verificaSeAchouFinal(dados,pilha,char**,fila);
+int verificaSeAchouFinal(dados,pilha,char**,lista);
 
 
 /*Verifica se o peek da posição atual quer voltar a posição anterior, entretanto só é permitiddo voltar pelo caminho já percorrido

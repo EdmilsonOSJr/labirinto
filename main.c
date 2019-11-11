@@ -20,7 +20,6 @@ int iniciar(int nomes,char**arquivo)
     return 0;
 }
 
-
 int main(int argc,char *argv[])
 {
     return iniciar(argc,argv);

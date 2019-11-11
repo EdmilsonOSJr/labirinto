@@ -4,9 +4,9 @@
 #include "arquivo.h"
 #include "labirinnto.h"
 #include "pilha.h"
-#include "fila.h"
+#include "lista.h"
 
-void passaCamiinhoParaFila(pilha p,fila f)
+void passaCamiinhoParaFila(pilha p,lista l)
 {
     pilha p2;
     TElemento e;
@@ -14,11 +14,11 @@ void passaCamiinhoParaFila(pilha p,fila f)
 
     p2=criaPilha();
 
-    if(p->tamanho<f->tamanho || f->tamanho==0)
+    if(p->tamanho<l->sizeLista || l->sizeLista==0)
     {
-        while(f->inicio!=NULL)
+        while(l->first!=NULL)
         {
-            desenfilera(f,&e);
+           remove_elemento(l,1);
         }
 
         paux=p->topo;
@@ -32,7 +32,7 @@ void passaCamiinhoParaFila(pilha p,fila f)
         while(p2->topo!=NULL)
         {
             pop(p2,&e);
-            enfilera(f,e);
+            insere_final(l,e);
         }
     }
     terminaPilha(p2);
@@ -62,13 +62,13 @@ void percorreMatriz(pilha p,dados d,char** matriz)
 }
 
 
-int verificaSeAchouFinal(dados d,pilha p,char**matriz,fila f)
+int verificaSeAchouFinal(dados d,pilha p,char**matriz,lista l)
 {
     TElemento e;
 
     if(d->lSaida==p->topo->info.linha && d->cSaida==p->topo->info.coluna)
     {
-        passaCamiinhoParaFila(p,f);
+        passaCamiinhoParaFila(p,l);
         pop(p,&e);
         voltaOCaminhoAoNormal(matriz,e);
         printf("\nAchou\n");
@@ -168,13 +168,13 @@ int verificaDirecaoDeSaida(dados d)
 }
 
 
-void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
+void caminhoPossivel(pilha p,char**matriz,dados d,lista l)
 {
     TElemento e;
 
     do
     {
-        if(p->tamanho<f->tamanho || f->tamanho==0)
+        if(p->tamanho<l->sizeLista || l->sizeLista==0)
         {
 
 
@@ -182,7 +182,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
             {
                 case 1:
 
-                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,l)==0)
                     {
                         if(verificaRetornoInvalido(p)==0)
                         {
@@ -199,7 +199,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
 
                 case 2:
 
-                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,l)==0)
                     {
                         if(verificaRetornoInvalido(p)==0)
                         {
@@ -216,7 +216,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
 
                 case 3:
 
-                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,l)==0)
                     {
                         if(verificaRetornoInvalido(p)==0)
                         {
@@ -233,7 +233,7 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
 
                 case 4:
 
-                    if(verificaSeAchouFinal(d,p,matriz,f)==0)
+                    if(verificaSeAchouFinal(d,p,matriz,l)==0)
                     {
                         if(verificaRetornoInvalido(p)==0)
                         {
@@ -267,25 +267,25 @@ void caminhoPossivel(pilha p,char**matriz,dados d,fila f)
     andaMatriz(d,matriz);
 }
 
-void printaMelhorCaminho(dados d,fila f,char**matriz)
+void printaMelhorCaminho(dados d,lista l,char**matriz)
 {
-    TNodoFila *n;
+   TNodoLista *n;
 
-    n=f->inicio;
+    n=l->first;
     while(n!=NULL)
     {
         matriz[n->info.linha][n->info.coluna]='1';
-        n=n->prox;
+        n=n->next;
     }
 
     printf("\n===================MENOR CAMINHO===================\n");
     printf("\n");
 
-    n=f->inicio;
+    n=l->first;
     while(n!=NULL)
     {
         printf(" Matriz[%d][%d] ",n->info.linha,n->info.coluna);
-        n=n->prox;
+        n=n->next;
     }
     printf("\n");
     printf("\n");
@@ -297,10 +297,10 @@ void printaMelhorCaminho(dados d,fila f,char**matriz)
 void andar(char** matriz,dados d)
 {
     pilha p;
-    fila f;
+    lista l;
     TElemento e;
 
-    f=criaFila();
+    l=cria_lista();
     p=criaPilha();
     proximaPosicao(&e,p,d);
     push(p,e);
@@ -308,13 +308,13 @@ void andar(char** matriz,dados d)
 
     do
     {
-        caminhoPossivel(p,matriz,d,f);
+        caminhoPossivel(p,matriz,d,l);
 
     }while(d->lEntrada!=p->topo->info.linha || d->cEntrada!=p->topo->info.coluna);
 
-    printaMelhorCaminho(d,f,matriz);
+    printaMelhorCaminho(d,l,matriz);
 
     printf("\nFIM\n");
     terminaPilha(p);
-    terminaFila(f);
+    termina_lista(l);
 }

@@ -1,64 +1,44 @@
 # depslib dependency file v1.0
-1572728685 source:/home/edmilson/Documentos/labirinto/arquivo.c
+1573167545 source:c:\users\edmilson\downloads\labirinto-master\arquivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arquivo.h"
 
-1572719748 /home/edmilson/Documentos/labirinto/arquivo.h
+1573167545 c:\users\edmilson\downloads\labirinto-master\arquivo.h
 
-1572699445 source:/home/edmilson/Documentos/labirinto/pilha.c
-	<stdio.h>
-	<stdlib.h>
-	"pilha.h"
-
-1572699435 /home/edmilson/Documentos/labirinto/pilha.h
-
-1572728823 source:/home/edmilson/Documentos/labirinto/main.c
-	<stdio.h>
-	<stdlib.h>
-	"arquivo.h"
-
-1572874851 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"arquivo.h"
-
-1572875165 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/arquivo.h
-
-1572874857 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/main.c
-	<stdio.h>
-	<stdlib.h>
-	"labirinnto.h"
-	"arquivo.h"
-
-1572815860 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.c
-	<stdio.h>
-	<stdlib.h>
-	"pilha.h"
-
-1572879501 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/pilha.h
-
-1572883667 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinto.c
+1573446010 source:c:\users\edmilson\downloads\labirinto-master\labirinto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arquivo.h"
 	"labirinnto.h"
 	"pilha.h"
-	"fila.h"
+	"lista.h"
 
-1572880576 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/labirinnto.h
+1573444059 c:\users\edmilson\downloads\labirinto-master\labirinnto.h
 	"pilha.h"
-	"fila.h"
+	"lista.h"
 	"arquivo.h"
 
-1572879545 source:/home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/fila.c
+1573167545 c:\users\edmilson\downloads\labirinto-master\pilha.h
+
+1573446325 c:\users\edmilson\downloads\labirinto-master\lista.h
+	"pilha.h"
+
+1573446589 source:c:\users\edmilson\downloads\labirinto-master\lista.c
 	<stdio.h>
 	<stdlib.h>
-	"fila.h"
+	"lista.h"
 
-1572879578 /home/edmilson/Documentos/GITHUB/Trabalho3/labirinto/fila.h
+1573447884 source:c:\users\edmilson\downloads\labirinto-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labirinnto.h"
+	"arquivo.h"
+
+1573167545 source:c:\users\edmilson\downloads\labirinto-master\pilha.c
+	<stdio.h>
+	<stdlib.h>
 	"pilha.h"
 
