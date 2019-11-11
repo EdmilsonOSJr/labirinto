@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "arquivo.h"
-#include "labirinnto.h"
+#include "labirinto.h"
 #include "pilha.h"
 #include "lista.h"
 

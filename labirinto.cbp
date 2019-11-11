@@ -35,14 +35,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arquivo.h" />
-		<Unit filename="fila.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="fila.h" />
-		<Unit filename="labirinnto.h" />
 		<Unit filename="labirinto.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="labirinto.h" />
+		<Unit filename="lista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lista.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "labirinnto.h"
+#include "labirinto.h"
 #include "arquivo.h"
 
 int iniciar(int nomes,char**arquivo)
