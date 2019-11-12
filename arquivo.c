@@ -52,7 +52,7 @@ char **alocaMemoriaDaMatriz(dados d)
     int i;
 
     m=(char**)malloc(sizeof(char*)*d->linha);
-    for(i=0;i<d->coluna;i++)
+    for(i=0;i<=d->linha;i++)
         m[i]=(char*)malloc(sizeof(char)*d->coluna);
     return m;
 }

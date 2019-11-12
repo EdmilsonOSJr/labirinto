@@ -292,11 +292,11 @@ void passaMelhorCaminhoParaArqDeSaida(dados d,lista l,char**matriz)
 
 }
 
-char **terminaMatriz(int linha,int coluna,char **matriz)
+char **terminaMatriz(dados d,char **matriz)
 {
     int l;
 
-    for(l=linha;l>=0;l--)
+    for(l=d->linha;l>0;l--)
         free(matriz[l]);
     free(matriz);
     return NULL;
@@ -324,6 +324,6 @@ void andar(char** matriz,dados d)
 
     terminaPilha(p);
     termina_lista(l);
-    terminaMatriz(d->linha,d->coluna,matriz);
+    terminaMatriz(d,matriz);
     printf("\nFinalizado com sucesso\n");
 }

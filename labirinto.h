@@ -63,6 +63,6 @@ void passaCamiinhoParaLista(pilha,lista);
 void passaMelhorCaminhoParaArqDeSaida(dados,lista,char**);
 
 /*Libera a memória alocada para a matriz*/
-char **terminaMatriz(int,int,char **);
+char **terminaMatriz(dados,char **);
 
 #endif // LABIRINTO_H_INCLUDED
